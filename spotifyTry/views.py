@@ -61,3 +61,7 @@ def createPersona(req:HttpRequest, usuario):
             print(e)
     persona.save()
     return HttpResponse("persona creada "+ str(persona))
+
+def getDocumento(req:HttpRequest, id):
+    documento = get_object_or_404(TipoDocumento, id=id)
+    return HttpResponse("Tipo de Documento que busca "+ str(documento))

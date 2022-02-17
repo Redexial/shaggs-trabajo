@@ -4,6 +4,8 @@ from django.db import models
 # Create your models here.
 
 class TipoDocumento(models.Model):
+    def __str__(self):
+        return ("nombre: %s, descripcion: %s"%(self.nombre, self.descripcion))
     nombre=models.CharField(max_length=200, unique=True)
     descripcion=models.CharField(max_length=600)
 

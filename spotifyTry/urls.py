@@ -6,5 +6,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('<usuario>/', views.userPersona, name="userPersona"),
     path('update/<usuario>/', views.updatePersona, name="updatePersona"),
-    path('create/<usuario>/', views.createPersona, name="createPersona")
+    path('create/<usuario>/', views.createPersona, name="createPersona"),
+    path('tipoDocumento/<int:id>/', views.getDocumento, name="getDocumento")
 ]
